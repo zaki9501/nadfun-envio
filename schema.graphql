@@ -1,27 +1,23 @@
-type BondingCurveRouter_LiquidityAdded @entity {
+type BondingCurveRouter_LiquidityAdded {
   id: ID!
   token: String!
   user: String!
   amount: BigInt!
 }
 
-type BondingCurveRouter_LiquidityRemoved @entity {
+type BondingCurveRouter_LiquidityRemoved {
   id: ID!
   token: String!
   user: String!
   amount: BigInt!
 }
 
-type BondingCurveRouter_Swap @entity {
+type BondingCurveRouter_Swap {
   id: ID!
   token: String!
   user: String!
   amountIn: BigInt!
   amountOut: BigInt!
   isBuy: Boolean!
-}
-
-type Query {
-  _: Boolean
 }
 
