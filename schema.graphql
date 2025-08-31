@@ -1,18 +1,18 @@
-type BondingCurveRouter_LiquidityAdded {
+type BondingCurveRouter_LiquidityAdded @entity {
   id: ID!
   token: String!
   user: String!
   amount: BigInt!
 }
 
-type BondingCurveRouter_LiquidityRemoved {
+type BondingCurveRouter_LiquidityRemoved @entity {
   id: ID!
   token: String!
   user: String!
   amount: BigInt!
 }
 
-type BondingCurveRouter_Swap {
+type BondingCurveRouter_Swap @entity {
   id: ID!
   token: String!
   user: String!
