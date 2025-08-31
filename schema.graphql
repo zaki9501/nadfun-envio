@@ -21,3 +21,7 @@ type BondingCurveRouter_Swap @entity {
   isBuy: Boolean!
 }
 
+type Query {
+  _: Boolean
+}
+
