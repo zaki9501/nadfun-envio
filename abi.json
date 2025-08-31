@@ -1,0 +1,186 @@
+[
+    {
+      "name": "getAmountOut",
+      "type": "function",
+      "stateMutability": "view",
+      "inputs": [
+        { "name": "token", "type": "address" },
+        { "name": "amountIn", "type": "uint256" },
+        { "name": "is_buy", "type": "bool" }
+      ],
+      "outputs": [
+        { "name": "amountOut", "type": "uint256" }
+      ]
+    },
+    {
+      "name": "getAmountIn",
+      "type": "function",
+      "stateMutability": "view",
+      "inputs": [
+        { "name": "token", "type": "address" },
+        { "name": "amountOut", "type": "uint256" },
+        { "name": "is_buy", "type": "bool" }
+      ],
+      "outputs": [
+        { "name": "amountIn", "type": "uint256" }
+      ]
+    },
+    {
+      "name": "buy",
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "inputs": [
+        { "name": "token", "type": "address" },
+        { "name": "amountIn", "type": "uint256" },
+        { "name": "amountOutMin", "type": "uint256" },
+        { "name": "to", "type": "address" },
+        { "name": "deadline", "type": "uint256" }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "exactOutBuy",
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "inputs": [
+        { "name": "token", "type": "address" },
+        { "name": "amountOut", "type": "uint256" },
+        { "name": "amountInMax", "type": "uint256" },
+        { "name": "to", "type": "address" },
+        { "name": "deadline", "type": "uint256" }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "sell",
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "inputs": [
+        { "name": "token", "type": "address" },
+        { "name": "amountIn", "type": "uint256" },
+        { "name": "amountOutMin", "type": "uint256" },
+        { "name": "to", "type": "address" },
+        { "name": "deadline", "type": "uint256" }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "exactOutSell",
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "inputs": [
+        { "name": "token", "type": "address" },
+        { "name": "amountOut", "type": "uint256" },
+        { "name": "amountInMax", "type": "uint256" },
+        { "name": "to", "type": "address" },
+        { "name": "deadline", "type": "uint256" }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "sellPermit",
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "inputs": [
+        { "name": "token", "type": "address" },
+        { "name": "amountIn", "type": "uint256" },
+        { "name": "amountOutMin", "type": "uint256" },
+        { "name": "to", "type": "address" },
+        { "name": "deadline", "type": "uint256" },
+        { "name": "permitData", "type": "bytes" }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "exactOutSellPermit",
+      "type": "function",
+      "stateMutability": "nonpayable",
+      "inputs": [
+        { "name": "token", "type": "address" },
+        { "name": "amountOut", "type": "uint256" },
+        { "name": "amountInMax", "type": "uint256" },
+        { "name": "to", "type": "address" },
+        { "name": "deadline", "type": "uint256" },
+        { "name": "permitData", "type": "bytes" }
+      ],
+      "outputs": []
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountIn",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "amountOut",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "isBuy",
+          "type": "bool"
+        }
+      ],
+      "name": "Swap",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "LiquidityAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "LiquidityRemoved",
+      "type": "event"
+    }
+]
+
+  

@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: nadfun-indexer
+networks:
+- id: 10143
+  start_block: 0
+  contracts:
+  - name: BondingCurveRouter
+    address:
+    - 0x4F5A3518F082275edf59026f72B66AC2838c0414
+    handler: src/EventHandlers.ts
+    events:
+    - event: LiquidityAdded(address indexed token, address indexed user, uint256 amount)
+    - event: LiquidityRemoved(address indexed token, address indexed user, uint256 amount)
+    - event: Swap(address indexed token, address indexed user, uint256 amountIn, uint256 amountOut, bool isBuy)
+unordered_multichain_mode: true
+preload_handlers: true
